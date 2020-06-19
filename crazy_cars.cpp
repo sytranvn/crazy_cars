@@ -6,6 +6,8 @@
 #include "banner.h"
 #include "win.h"
 
+#define sleepms(x) usleep(x * 1000)
+
 int main (int argc, char *args[])
 {
   initscr();
@@ -23,7 +25,9 @@ int main (int argc, char *args[])
   WINDOW *game_win;
   game_win = create_newwin(row - 2, col, 0, 0);
 
-  while (true)
+  curs_set(0);
+
+  while (carx < col - BANNER_CAR_WIDTH)
   {
     
     banner(game_win);
@@ -32,10 +36,10 @@ int main (int argc, char *args[])
 
     wrefresh(game_win);
 
-    usleep(30000);
-
-    if (carx >= col - 15) carx = 2;
+    sleepms(30);
   }
+
+  // curs_set(1);
 
   getchar();
 

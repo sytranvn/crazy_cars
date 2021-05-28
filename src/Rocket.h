@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CRAZY_CAR__ROCKET_H__
+#define __CRAZY_CAR__ROCKET_H__
+
 class CRocket
 {
 public:
@@ -12,3 +14,4 @@ public:
 	~CRocket(void);
 };
 
+#endif

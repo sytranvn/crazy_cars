@@ -1,52 +1,54 @@
-#include "F1.h"
+#include "Bugatti.h"
 #include "Racing.h"
 
-void CF1::DrawCar()
+void CBugatti::DrawCar()
 {
-	CRacing::MapChar[m_X][m_Y] = (char)206;
-	CRacing::MapColor[m_X][m_Y] = 154;
+	if (this->hidden) return;
+	CRacing::MapChar[m_X][m_Y] = (char)30;
+	CRacing::MapColor[m_X][m_Y] = 207;
 	CRacing::MapChar[m_X][m_Y-1]=(char)203;
-	CRacing::MapColor[m_X][m_Y-1]=250;
+	CRacing::MapColor[m_X][m_Y-1]=12;
 	CRacing::MapChar[m_X + 1][m_Y] = (char)185;
-	CRacing::MapColor[m_X + 1][m_Y] = 250;
+	CRacing::MapColor[m_X + 1][m_Y] = 12;
 
 	CRacing::MapChar[m_X - 1][m_Y] = (char)204;
-	CRacing::MapColor[m_X - 1][m_Y] =250;
+	CRacing::MapColor[m_X - 1][m_Y] =12;
 	CRacing::MapChar[m_X - 1][m_Y + 1] = (char)223;
-	CRacing::MapColor[m_X - 1][m_Y + 1] = 112;
+	CRacing::MapColor[m_X - 1][m_Y + 1] = 121;
 	CRacing::MapChar[m_X - 1][m_Y - 1] = (char)222;
-	CRacing::MapColor[m_X - 1][m_Y - 1] = 112;
+	CRacing::MapColor[m_X - 1][m_Y - 1] = 121;
 
 	CRacing::MapChar[m_X + 1][m_Y + 1] = (char)223;
-	CRacing::MapColor[m_X + 1][m_Y + 1] =112;
+	CRacing::MapColor[m_X + 1][m_Y + 1] =121;
 	CRacing::MapChar[m_X + 1][m_Y - 1] = (char)221;
-	CRacing::MapColor[m_X + 1][m_Y - 1] = 112;
+	CRacing::MapColor[m_X + 1][m_Y - 1] = 121;
 	CRacing::MapChar[m_X][m_Y+1]=(char)127;
-	CRacing::MapColor[m_X][m_Y+1]=124;
+	CRacing::MapColor[m_X][m_Y+1]=126;
 }
 
-void CF1::ShowCar()
+
+void CBugatti::ShowCar()
 {
-	for (int i=-3;i<m_Health-3;i++)
+	for (int i=-3;i<m_Health-4;i++)
 	{
 		CRacing::MapChar[m_X+i][m_Y+3]=(char)3;
 		CRacing::MapColor[m_X+i][m_Y+3]=124;
 	}
-	for (int i=-3;i<m_Speed-3;i++)
+	for (int i=-3;i<m_Speed-4;i++)
 	{
 		CRacing::MapChar[m_X+i][m_Y+4]=(char)16;
 		CRacing::MapColor[m_X+i][m_Y+4]=126;
 	}
 }
 
-void CF1::StopShow()
+void CBugatti::hide()
 {
-	for (int i=-3;i<m_Health-3;i++)
+	for (int i=-4;i<m_Health-4;i++)
 	{
 		CRacing::MapChar[m_X+i][m_Y+3]=' ';
 		CRacing::MapColor[m_X+i][m_Y+3]=119;
 	}
-	for (int i=-3;i<m_Speed-3;i++)
+	for (int i=-4;i<m_Speed-4;i++)
 	{
 		CRacing::MapChar[m_X+i][m_Y+4]=' ';
 		CRacing::MapColor[m_X+i][m_Y+4]=119;
@@ -61,14 +63,12 @@ void CF1::StopShow()
 	}
 }
 
-CF1::CF1(void)
+CBugatti::CBugatti(void)
 {
-	m_Speed=10;
-	m_Health=5;
+	m_Speed=9;
+	m_Health=6;
 	m_Score=0;
 }
 
-
-CF1::~CF1(void)
-{
-}
+CBugatti::~CBugatti(void)
+{}

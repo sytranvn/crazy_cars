@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CRAZY_CAR__SCORE_H__
+#define __CRAZY_CAR__SCORE_H__
+
 #include <string>
 using namespace std;
 class CScore
@@ -14,3 +16,4 @@ public:
 	~CScore(void);
 };
 
+#endif

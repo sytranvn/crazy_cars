@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CRAZY_CAR__BONUS_H__
+#define __CRAZY_CAR__BONUS_H__
+
 class CBonus
 {
 public:
@@ -10,3 +12,4 @@ public:
 	~CBonus(void);
 };
 
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CRAZY_CAR__OBSTACLE_H__
+#define __CRAZY_CAR__OBSTACLE_H__
+
 class CObstacle
 {
 public:
@@ -10,3 +12,4 @@ public:
 	~CObstacle(void);
 };
 
+#endif

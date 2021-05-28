@@ -1,8 +1,5 @@
 #include "Car.h"
 #include "Racing.h"
-void CCar::DrawCar()
-{
-}
 
 
 void CCar::Move()
@@ -87,8 +84,19 @@ bool CCar::CollectScore()
 
 void CCar::Fire()
 {
-	
+
 }
+
+void CCar::Show()
+{
+	this->hidden = false;
+}
+
+void CCar::Hide()
+{
+	this->hidden = true;
+}
+
 CCar::CCar(void)
 {
 }

@@ -4,7 +4,7 @@
 #include "Rocket.h"
 #include "Control.h"
 #include <vector>
-using namespace std;
+#include <string>
 class CCar:public CControl
 {
 public:

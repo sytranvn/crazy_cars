@@ -7,17 +7,17 @@ CScore::CScore(void)
 
 void CScore::Input()
 {
-	getline(CRacing::f_read,Name,',');
-	CRacing::f_read>>Score;
+    getline(CRacing::f_read,Name,',');
+    CRacing::f_read>>Score;
 }
 
 int CScore::RSc()
 {
-	return Score;
+    return Score;
 }
 string CScore::RNn()
 {
-	return Name;
+    return Name;
 }
 CScore::~CScore(void)
 {

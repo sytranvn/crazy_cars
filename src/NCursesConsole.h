@@ -8,8 +8,8 @@
 class CNCursesConsole
 {
   public:
-    CNCursesConsole() {
-       local_win = stdscr;
+    CNCursesConsole(WINDOW* _win) {
+       local_win = _win;
        startx = 0, starty = 0, height = 10, width = 10;
     };
     CNCursesConsole CNursesConsole(int height, int width, int starty, int startx);
@@ -19,6 +19,10 @@ class CNCursesConsole
     void Refresh();
     void Write(std::string, std::size_t row, std::size_t col);
     void Close();
+    int GetCh();
+    WINDOW* GetWin() {
+        return local_win;
+    }
 
     ~CNCursesConsole();
   private:

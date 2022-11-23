@@ -16,3 +16,15 @@ void CNCursesConsole::Refresh()
 {
     wrefresh(local_win);
 }
+
+int CNCursesConsole::GetCh()
+{
+    return wgetch(local_win);
+}
+
+CNCursesConsole::~CNCursesConsole()
+{
+    clrtoeol();
+    refresh();
+    endwin();
+}

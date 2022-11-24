@@ -5,6 +5,8 @@
 #include "Control.h"
 #include <vector>
 #include <string>
+#include <ncurses.h>
+
 class CCar:public CControl
 {
 public:
@@ -14,10 +16,12 @@ public:
 	int m_Y;
 	int m_Score;
 	bool hidden;
+	int m_key_up = KEY_UP, m_key_down = KEY_DOWN, m_key_left = KEY_LEFT, m_key_right = KEY_RIGHT;
 
 public:
 	virtual void draw_car();
-	void move();
+	virtual void show_car();
+	void move(WINDOW *win);
 	void fire();
 	bool impinge();
 	bool collect_score();

@@ -1,7 +1,8 @@
 #include "F1.h"
 #include "Racing.h"
 
-void CF1::DrawCar() {
+void CF1::draw_car()
+{
   CRacing::MapChar[m_X][m_Y] = (char)206;
   CRacing::MapColor[m_X][m_Y] = 154;
   CRacing::MapChar[m_X][m_Y - 1] = (char)203;
@@ -24,7 +25,8 @@ void CF1::DrawCar() {
   CRacing::MapColor[m_X][m_Y + 1] = 124;
 }
 
-void CF1::ShowCar() {
+void CF1::show_car()
+{
   if (!this->hidden) {
     for (int i = -3; i < m_Health - 3; i++) {
       CRacing::MapChar[m_X + i][m_Y + 3] = (char)3;

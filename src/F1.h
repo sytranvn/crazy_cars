@@ -4,8 +4,8 @@
 #include "Car.h"
 class CF1 : public CCar {
 public:
-  void DrawCar();
-  void ShowCar();
+  void draw_car();
+  void show_car();
   // void Move();
   // void Fire();
   CF1(void);

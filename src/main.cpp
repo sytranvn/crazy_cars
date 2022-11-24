@@ -2,13 +2,13 @@
 #include "Racing.h"
 
 #define WIDTH 80
-#define HEIGHT 20 
+#define HEIGHT 20
 
 int startx = 0;
 int starty = 0;
 
 char *choices[] = { 
-			(char*)"Choice 111",
+			(char*)"Choice 1",
 			(char*)"Choice 2",
 			(char*)"Choice 3",
 			(char*)"Choice 4",
